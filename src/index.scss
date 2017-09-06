@@ -1,0 +1,112 @@
+html,body{
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+section{
+  margin-bottom: 20px;
+}
+
+//工具类
+@mixin marginbase($pos,$size){
+  margin-#{$pos}:$size;
+}
+
+@for $i from 5 through 30{
+  @if $i%5==0{
+    .margL#{$i}{
+      margin-left: $i*1px; 
+    }
+    
+  }
+}
+@for $i from 5 through 30{
+  @if $i%5==0{
+    .margR#{$i}{
+      margin-right: $i*1px; 
+    }
+    
+  }
+}
+@for $i from 5 through 30{
+  @if $i%5==0{
+    .margT#{$i}{
+      margin-top: $i*1px; 
+    }
+    
+  }
+}
+@for $i from 5 through 30{
+  @if $i%5==0{
+    .margB#{$i}{
+      margin-bottom: $i*1px; 
+    }
+    
+  }
+}
+
+.logo{
+  color: #333;
+  &:hover{
+    text-decoration: none;
+  }
+  &:active{
+    outline: none;
+  }
+}
+.relative{
+  position: relative;
+}
+.text-center{
+  text-align: center;
+}
+.btn-getpwd{
+  position: absolute;
+  top: -30px;
+  right: 0;
+}
+.btn>a{
+  color:inherit;
+}
+.navLogin{
+	margin:8px 0;
+}
+.playlsitNav{
+  .btn{
+    margin: 5px;
+  }
+}
+
+.navbar-inverse{
+  .navbar-nav > li a{
+    color:#9d9d9d;
+    &:hover{
+      color: white;
+    }
+  }
+  .btn a{
+    color:white;
+  }
+  a:hover{
+    text-decoration: none;
+  }
+}
+.bookshelf{
+  a{
+    color: #f2f2f2;
+  }
+  .bookshelf-item img{
+    display: block;
+    width: 100%;
+  }
+}
+.pagination > .active > a{
+  background-color: #777;
+  border-color: #ddd;
+}
+.pagination > li > a{
+  color: #333;
+}
