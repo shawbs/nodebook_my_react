@@ -1,4 +1,4 @@
-
+import * as api from '../api';
 
 
 
@@ -22,3 +22,21 @@ export const SET_MESSAGE = 'SET_MESSAGE';
 export function setMessage(text){
     return {type:SET_MESSAGE, message: text}
 }
+
+
+export const doLogin = (paramter) => (dispatch,getState) =>{
+        dispatch(setLoginState(true));
+        dispatch(setLoadingState(true));
+        return api.LOGIN_API(paramter)
+            .then(res=>{
+                console.log(1)
+                dispatch(setLoadingState(false));
+            })
+            .catch(err=>{
+                console.log(2)
+                dispatch(setLoadingState(false));
+                dispatch(setMessage('hehe, 登录失败')); 
+            })
+        
+}
+

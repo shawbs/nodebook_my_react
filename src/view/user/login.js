@@ -46,15 +46,11 @@ class LoginComponent extends Component {
     } 
     //如果表单控件状态都为'success'
     if(FormExp.checkForm(this.state.formState)){
-      console.log(this.props)
       this.props.dispatch(setLoadingState(true));
-      // this.props.showLoader();
       LOGIN_API(paramter)
         .then(data=>{
         
           this.props.dispatch(setLoadingState(false));
-          // this.props.hideLoader();
-
           if(data.state){
             localStorage.setItem('userO',JSON.stringify(data.data)); 
             browserHistory.push('/');
