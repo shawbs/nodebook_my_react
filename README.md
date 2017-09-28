@@ -1,6 +1,7 @@
 # 在线小说站
 ### 技术栈使用了（node + mongodb + react + redux + bootstrap）
 
+> creat-react-app v1.4.1
 
 ### 运行
 >npm install
