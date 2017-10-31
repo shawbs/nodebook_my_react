@@ -19,7 +19,7 @@
   "scripts": {
     "build-css": "node-sass src/ -o src/",
     "watch-css": "node-sass src/ -o src/ --watch",
-    "start": "npm run build-css && react-scripts start",
+    "start": "npm run build-css && react-scripts start && npm run watch-css",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

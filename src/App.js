@@ -14,22 +14,17 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-      loading:false
+      loading:false,
+      content:'123123123123'
     }
   }
   render() {
-    // let  that = this;
-    // store.subscribe(function(){
-    //   console.log(store.getState())
-    //   that.setState({
-    //     loading:store.getState().loadingState
-    //   })
-    // })
+    console.log(this.props)
     let loadingState = store.getState().loadingState;
     return (
       <div className="App">
         <Loader loading={loadingState} loaderText="please wait..." enableclose={false} />
-        <Toast content="hehe"/>
+        <Toast content={this.state.content}/>
         <HeaderBar />
         {this.props.children}
       </div>

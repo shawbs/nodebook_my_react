@@ -42,7 +42,7 @@ class LoginComponent extends Component {
     
     let paramter = {
       username: this.loginForm.username.value,
-      password: this.loginForm.password.value
+      pwd: this.loginForm.password.value
     } 
     //如果表单控件状态都为'success'
     if(FormExp.checkForm(this.state.formState)){
@@ -61,12 +61,7 @@ class LoginComponent extends Component {
           }
       })
       .catch(err=>{
-          console.error(err)
           this.props.dispatch(setLoadingState(false));
-          this.props.dispatch(setMessage('hehe, 登录失败'));
-          setTimeout(()=>{
-            this.props.dispatch(setMessage(''));
-          },3000)
       })
 
     }

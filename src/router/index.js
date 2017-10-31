@@ -34,6 +34,7 @@ const routes = (
 				<Route path="reading" component={ReadingComponent} />
 			</Route>
 			<Route path="user" component={User}>
+				<IndexRoute component={LoginComponent} />
 				<Route path="login" component={LoginComponent}/>
 				<Route path="register" component={RegisterComponent}/>
 				<Route path="getpwd" component={GetpwdComponent}/>

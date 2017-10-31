@@ -15,7 +15,7 @@ class User extends Component {
     super(props)
   }
   render() {
-    console.log(this.props.message)
+    console.log(this.props)
     return (
       <div>
         <Loader loading={this.props.loading} loaderText="please wait..." enableclose={false} />

@@ -1,16 +1,22 @@
 # 在线小说站
 ### 技术栈使用了（node + mongodb + react + redux + bootstrap）
+```
+ 开发环境 development environment
+ node v6.9.1
+ creat-react-app v1.4.1
+```
+- 运行
+```
+npm install
+npm start / yarn start
+```
+- 打包
+```
+npm run build
+``` 
 
-> creat-react-app v1.4.1
-
-### 运行
->npm install
->
->npm run start 或 yarn start
-
-### 打包 (第一行指令是打包，剩下的是运行)
->npm run build 
-
->npm install -g serve
-
->serve -s build
+- 生产运行
+```
+npm install -g serve
+serve -s build
+```

@@ -4,11 +4,13 @@ import config from '../config';
 // 设置全局请求url
 axios.defaults.baseURL = config.baseURL;
 // 开启发送请求时设置cookie
-axios.defaults.withCredentials = true;
+// axios.defaults.withCredentials = true;
+
+axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
 const main_url = {
-    login_url: 'login',
-    register_url:'register'
+    login_url: '/login',
+    register_url:'/register'
 }
 
 export const POST_API = (url,paramter) => axios.post(url, paramter);

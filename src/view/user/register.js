@@ -50,7 +50,7 @@ export default class RegisterComponent extends Component {
      
     let paramter = {
       username: this.regForm.username.value,
-      password: this.regForm.password.value
+      pwd: this.regForm.password.value
     } 
     //如果表单控件状态都为'success'
     if(FormExp.checkForm(this.state.formState)){
@@ -92,7 +92,7 @@ export default class RegisterComponent extends Component {
                 注册
               </Button>&nbsp;&nbsp;&nbsp;
               <Button type="submit">
-                <Link to="/login">已有帐户</Link>
+                <Link to="/user/login">已有帐户</Link>
               </Button>
     
             </div>
